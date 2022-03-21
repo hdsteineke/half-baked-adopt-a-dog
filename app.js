@@ -3,7 +3,11 @@ import { renderDogCard } from './render-utils.js';
 
 const dogListContainer = document.getElementById('dog-list-container');
 
+window.addEventListener('load', async() => {
+    const dogs = await getDogs(); 
 
+    console.log(dogs);
+})
 
 // on load
 // fetch all dogs
