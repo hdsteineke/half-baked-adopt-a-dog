@@ -6,8 +6,14 @@ const dogListContainer = document.getElementById('dog-list-container');
 window.addEventListener('load', async() => {
     const dogs = await getDogs(); 
 
-    console.log(dogs);
-})
+    for (let dog of dogs) {
+        const dogEl = renderDogCard(dog);
+
+        dogListContainer.append(dogEl);
+    
+    }});
+
+
 
 // on load
 // fetch all dogs
